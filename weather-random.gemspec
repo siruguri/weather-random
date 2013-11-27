@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["siruguri@gmail.com"]
   spec.description   = %q{This gem provides a class WeatherRandom that uses the WeatherUnderground API to generate a seed for a "T"RNG.}
   spec.summary       = %q{The gem requires you to have a Wunderground API key, which you have to supply to it in the initializations}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/siruguri/weather-random"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
