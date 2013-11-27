@@ -22,13 +22,14 @@ Or install it yourself as:
 
 ## Usage
 
-Create an object instance of `WeatherRandom`, and initalize it with a Wunderground URL for now - future versions will let you set up your own entropy generator. Note that the URL has to have the string `#key` where your key will go, else you'll get the `WeatherRandom::ImproperApiURL` exception.
+Create an object instance of `WeatherRandom::WeatherApi`, and initalize it with a Wunderground URL for now - future versions will let you set up your own entropy generator. Note that the URL has to have the string `#key` where your key will go, else you'll get the `WeatherRandom::ImproperApiURL` exception.
 
     # You can pick any city you like.
-    entropy_object = WeatherRandom.new('http://api.wunderground.com/api/#key/conditions/q/CA/San_Francisco.json', <key_value>)
+    entropy_object = WeatherRandom::WeatherApi.new('http://api.wunderground.com/api/#key/conditions/q/CA/San_Francisco.json', <key_value>)
     entropy_object.fetch_uri
 
-    Random.new(entropy_object.make_seed)
+    r=Random.new(entropy_object.make_seed)
+    r.rand
 
 ## Contributing
 
