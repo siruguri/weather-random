@@ -1,15 +1,15 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'weather/random/version'
+require 'weather-random/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "weather-random"
-  spec.version       = Weather::Random::VERSION
+  spec.version       = WeatherRandom::VERSION
   spec.authors       = ["Sameer Siruguri"]
   spec.email         = ["siruguri@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{This gem provides a class WeatherRandom that uses the WeatherUnderground API to generate a seed for a "T"RNG.}
+  spec.summary       = %q{TODO: The gem requires you to have a Wunderground API key, which you have to supply to it in the initializations}
   spec.homepage      = ""
   spec.license       = "MIT"
 
