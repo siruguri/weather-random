@@ -7,7 +7,7 @@ require "minitest/autorun"
 describe WeatherRandom do
 
   before do
-    @key=((File.open 'test/tmp/key.txt').readlines)[0].chomp
+    @key='mykeyvalue'
     @url='http://api.wunderground.com/api/#key/conditions/q/CA/San_Francisco.json'
     @api=WeatherRandom::WeatherApi.new(@url, @key)
   end
